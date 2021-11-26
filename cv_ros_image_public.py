@@ -10,9 +10,7 @@ image_pub = rospy.Publisher('~debug', Image)
 bridge = CvBridge()
 
 def image_callback(data):
-    #img = cv.imread('shapes.jpg')
-    img = cv.imread('cirk.png')
-    #imgGrey = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+    img = cv.imread('shapes.png')
     image_pub.publish(bridge.cv2_to_imgmsg(img, 'bgr8'))
     
     print(".") 
