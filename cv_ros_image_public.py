@@ -4,8 +4,8 @@ import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
-rospy.init_node('png')
-image_pub = rospy.Publisher('~debug', Image)
+rospy.init_node('Prepod')
+image_pub = rospy.Publisher('Shapes', Image)
 
 bridge = CvBridge()
 
